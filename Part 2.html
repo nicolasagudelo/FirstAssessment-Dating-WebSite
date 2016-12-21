@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dating Website</title>
+    <meta charset="UTF-8" name = "author" content="Nicolas Alberto Agudelo">
+    <style>
+        fieldset{
+            background: lightyellow;
+            border: 10px solid yellow;
+            margin-bottom: 10px;
+            width: 720px;
+        }
+        label{
+            width: 180px;
+            display: inline-block;
+            text-align: right;
+            vertical-align: top;
+        }
+        textarea{
+            width: 360px;
+            height: 50px;
+        }
+        .check{
+            width: auto;
+        }
+
+        .low{
+            text-align: center;
+            color: white;
+            background: darkred;
+        }
+        .high{
+            text-align: center;
+            color: white;
+            background: purple;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Please Enter Your Details For Our Dating Website</h1>
+<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"
+      method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Your Face</legend>
+        <label for = "Image">Your image</label>
+        <input type="file" id ="Image" name="ImageUpload" required><br>
+        <label for = "preview">Image Preview:</label>
+        <img id = "preview" align="top">
+        <br>
+    </fieldset>
+    <fieldset>
+        <legend>Your General Details</legend>
+        <label for ="name">Name:</label>
+        <input type="text" id = "name" name="Name" required placeholder="Your full name"><br>
+        <label for ="gender">Gender:</label>
+        <label class="check" for ="gender 2"></label>
+        <input type="radio" id = "gender" name="gender" value="M" required>Male
+        <input type="radio" id = "gender 2" name="gender" value="F" required>Female<br>
+        <label for ="age">Age:</label>
+        <input type="number" id="age" name="Age" placeholder="18" required><br>
+        <label for ="birthday">Date of Birth:</label>
+        <input type="date" id="birthday" name="Birthday"><br>
+        <label for ="color">Favorite Color:</label>
+        <input type="color" id="color" name="Color"><br>
+        <label for ="country">Which Country:</label>
+        <select id = country name="Country">
+            <option value="NS">No Selection</option>
+            <option value="CO">Colombia</option>
+            <option value="BR">Brasil</option>
+            <option value="CA">Canada</option>
+            <option value="US">Unided States</option>
+            <option value="SP">Spain </option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Your Indicators </legend>
+        <label for ="height">Height:</label>
+        <span class="low">Short</span><input type="range" min="0"max="100" id="height" name="Height"><span class="high">Tall</span><br>
+        <label for ="salary">Salary:</label>
+        <span class="low">Poor</span> <input type="range" min="0"max="100" id="salary" name="Salary"><span class="high">Rich</span><br>
+    </fieldset>
+    <fieldset>
+        <legend>Your Contact Information</legend>
+        <label for ="email">Email:</label>
+        <input type="email" id = "email" name = "email" required><br>
+        <label for ="mobile">Mobile:</label>
+        <input type="tel" id = "mobile" name="cellphone"><br>
+        <label for ="address">Address:</label>
+        <textarea id = "address" name="address" placeholder="Enter Your Address Here"></textarea><br>
+        <label for="contact">Method to contact you:</label>
+        <label class="check" for="contact2"></label>
+        <label class="check" for="contact3"></label>
+        <input type="checkbox" id="contact" name = "contact"><span>Email</span>
+        <input type="checkbox" id = "contact2" name = "contact"><span>Whatsapp</span>
+        <input type="checkbox" id = "contact3" name = "contact"><span>In-App Chat</span>
+    </fieldset>
+    <input type="submit">
+</form>
+</body>
+</html>
